@@ -47,6 +47,7 @@ export default function WalletTabScreen() {
   const accountBalance = useAccountBalance();
   const networkType = useNetworkType();
   const isTestNetwork = networkType === NetworkType.TESTNET;
+  const isRegTestNetwork = networkType === NetworkType.REGTEST;
 
   const currentKeyring = useCurrentKeyring();
   const currentAccount = useCurrentAccount();
@@ -176,6 +177,7 @@ export default function WalletTabScreen() {
           {currentKeyring.type === KEYRING_TYPE.HdKeyring && <AccountSelect />}
           {currentKeyring.type === KEYRING_TYPE.KeystoneKeyring && <AccountSelect />}
           {isTestNetwork && <Text text="Bitcoin Testnet activated." color="danger" textCenter />}
+          {isRegTestNetwork && <Text text="Bitcoin Regtest activated." color="danger" textCenter />}
 
           {walletConfig.statusMessage && <Text text={walletConfig.statusMessage} color="danger" textCenter />}
 
