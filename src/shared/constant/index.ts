@@ -246,8 +246,8 @@ export const INTERNAL_REQUEST_SESSION = {
 };
 
 export const OPENAPI_URL_MAINNET = 'https://wallet-api.unisat.io/v5';
-export const OPENAPI_URL_TESTNET = 'https://wallet-api-testnet.unisat.io/v5';
-export const OPENAPI_URL_REGTEST = 'http://localhost:10110/v5';
+export const OPENAPI_URL_TESTNET = 'http://localhost:3009/v5';
+export const OPENAPI_URL_REGTEST = 'http://localhost:3009/v5';
 
 export const EVENTS = {
   broadcastToUI: 'broadcastToUI',
