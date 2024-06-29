@@ -218,7 +218,8 @@ export const RESTORE_WALLETS: { value: RestoreWalletType; name: string; addressT
 
 export const NETWORK_TYPES = [
   { value: NetworkType.MAINNET, label: 'LIVENET', name: 'livenet', validNames: [0, 'livenet', 'mainnet'] },
-  { value: NetworkType.TESTNET, label: 'TESTNET', name: 'testnet', validNames: ['testnet'] }
+  { value: NetworkType.TESTNET, label: 'TESTNET', name: 'testnet', validNames: ['testnet'] },
+  { value: NetworkType.REGTEST, label: 'REGTEST', name: 'regtest', validNames: ['regtest'] },
 ];
 
 export const MINIMUM_GAS_LIMIT = 21000;
@@ -246,6 +247,7 @@ export const INTERNAL_REQUEST_SESSION = {
 
 export const OPENAPI_URL_MAINNET = 'https://wallet-api.unisat.io/v5';
 export const OPENAPI_URL_TESTNET = 'https://wallet-api-testnet.unisat.io/v5';
+export const OPENAPI_URL_REGTEST = 'http://localhost:10110/v5';
 
 export const EVENTS = {
   broadcastToUI: 'broadcastToUI',

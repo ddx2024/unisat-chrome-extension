@@ -95,6 +95,7 @@ export class OpenApiService {
   };
 
   getRespData = async (res: any) => {
+    console.log('ys res', res);
     let jsonRes: { code: number; msg: string; data: any };
 
     if (!res) throw new Error('Network error, no response');
