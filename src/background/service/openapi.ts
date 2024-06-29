@@ -1,7 +1,7 @@
 import randomstring from 'randomstring';
 
 import { createPersistStore } from '@/background/utils';
-import { CHANNEL, OPENAPI_URL_MAINNET, OPENAPI_URL_TESTNET, VERSION } from '@/shared/constant';
+import {CHANNEL, OPENAPI_URL_MAINNET, OPENAPI_URL_REGTEST, OPENAPI_URL_TESTNET, VERSION} from '@/shared/constant';
 import {
   AddressRunesTokenSummary,
   AddressSummary,
@@ -66,8 +66,10 @@ export class OpenApiService {
       const networkType = preferenceService.getNetworkType();
       if (networkType === NetworkType.MAINNET) {
         this.store.host = OPENAPI_URL_MAINNET;
-      } else {
+      } else if (networkType === NetworkType.TESTNET)  {
         this.store.host = OPENAPI_URL_TESTNET;
+      } else {
+        this.store.host = OPENAPI_URL_REGTEST;
       }
     }
 
